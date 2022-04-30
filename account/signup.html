@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign_up</title>
+    <link rel="stylesheet" href="common.css"/>
+</head>
+<body>
+   
+    <h1>sign up</h1>
+    <div>
+        <form id="form">
+            <h3>Full name</h3>
+            <input type="text" id="name" placeholder="Enter Name">
+            <h3>E-Mail</h3>
+            <input type="email" id="email" placeholder="Enter Email">
+            <h3>Password</h3>
+            <input type="password" id="passward" placeholder="Enter Password">
+            <br>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+  
+</body>
+</html>
+<script>
+document.querySelector("#form").addEventListener("submit",myfun)
+  
+function myfun(){
+    event.preventDefault();
+    var objDetail={
+        personName:form.name.value,
+
+        personEmail:form.email.value,
+
+        personPass:form.passward.value,
+    };
+   
+    
+    //console.log(detail)
+  localStorage.setItem("signUp",JSON.stringify(objDetail))
+
+  window.location="signin.html";
+
+
+}
+</script>
